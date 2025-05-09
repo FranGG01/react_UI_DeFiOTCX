@@ -4,6 +4,7 @@ import './HeroSection.css';
 import Button from '../../Componentes/Button/Button.jsx';
 import { FaBars } from 'react-icons/fa';
 import { alert1, alert2, alert3 } from '../../Componentes/Alert/Alert.jsx';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const HeroSection = () => {
   
@@ -13,7 +14,17 @@ const HeroSection = () => {
         <nav className="hero-nav d-flex justify-content-between align-items-center mt-0 px-5 w-100">
           <div className="logo">OTCX</div>
           <div className="d-flex gap-2 justify-content-center align-items-center">
-            <FaBars />
+            <Dropdown>
+                <Dropdown.Toggle variant="dark" id="dropdown-basic">
+                  <FaBars />
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#/action-1">Menu</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Help</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Log out</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
             <Button text="Request Early Access" onClick={alert2} variant="primary" />
           </div>
         </nav>
