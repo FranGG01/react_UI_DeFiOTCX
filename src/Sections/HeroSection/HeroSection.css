@@ -1,10 +1,10 @@
 /* src/components/Hero.css */
 .hero {
     position: relative;
-    width:100%;
+    width: 100%;
     background-image:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('../../assets/bg-hero.png');
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('../../assets/bg-hero.png');
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
@@ -14,29 +14,69 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-;
 }
 
-.logo{
+/* Logo */
+.logo {
     font-weight: 500;
     font-size: 2rem;
 }
 
+/* Contenido principal dentro del hero */
 .hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start; 
     width: 50%;
     padding: 5%;
     padding-right: 20%;
     margin-top: 5%;
 }
-.highlight{
+
+/* Texto destacado */
+.highlight {
     color: #AEEA22;
 }
-.hero-subtitle{
+
+/* Subtítulo */
+.hero-subtitle {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     padding-right: 8rem;
+}
+
+/* --------- MEDIA QUERIES PARA RESPONSIVE --------- */
+@media (max-width: 1024px) {
+  .hero-content {
+    width: 70%;
+    padding-right: 10%;
+    margin-top: 3%;
+  }
+  
+  .hero-subtitle {
+    padding-right: 4rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 1rem 1.5rem;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 2% 1rem;
+    margin-top: 2%;
+  }
+
+  .hero-subtitle {
+    padding-right: 0;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
 }

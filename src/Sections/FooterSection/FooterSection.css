@@ -1,54 +1,83 @@
 .footer {
-    color: white;
-    background-color: #161616;
-    height: 50vh;
-    width: 100%;
-  }
-  
-  .footer-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-  }
-   
-  .footer-title p{
-    width: 45%;
-  }
+  color: white;
+  background-color: #161616;
+  height: 50vh;
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.footer-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 0 1rem;
+}
+
+.footer-title p {
+  width: 45%;
+  max-width: 600px;
+}
+
+.footer-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 1rem;
+  flex-wrap: nowrap;
+}
+
+.footer-end-right {
+  display: flex;
+  position: relative;
+  left: 150px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-end-left {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 150px;
+  gap: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Media Queries para responsividad */
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+  }
+  .footer-title p {
+    width: 90%;
+  }
   .footer-end {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-  }
-  
-  .footer-end-right {
-    display: flex;
-    position: relative;
-    left: 150px;
-  
-  }
-  
-  .footer-icons {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .footer-end-left{
-    display: flex;
     flex-direction: column;
-    position: relative;
-    right: 150px;
-  
-    gap: 10px;
-    
+    align-items: center;
+    gap: 2rem;
   }
-
-  ul {
-    list-style: none;
-    
+  .footer-end-right,
+  .footer-end-left {
+    position: static;
+    right: 0;
+    left: 0;
+    align-items: center;
   }
+}
